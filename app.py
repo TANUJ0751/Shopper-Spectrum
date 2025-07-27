@@ -66,8 +66,8 @@ rfm_ref = pd.read_csv('rfm_clusters.csv', index_col=0)
 # ---------------------
 # Streamlit App Layout
 # ---------------------
-#st.set_page_config(page_title="🛍 Shopper Spectrum", layout="centered")
-st.title("🛍 Shopper Spectrum")
+st.set_page_config(page_title="🛍 Shopper Spectrum", layout="centered")
+st.title("Shopper Spectrum")
 tab1, tab2 = st.tabs(["🔁 Product Recommendation", "🎯 Customer Segmentation"])
 
 # ---------------------
