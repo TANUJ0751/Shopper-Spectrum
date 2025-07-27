@@ -7,7 +7,7 @@ from difflib import get_close_matches
 # ----------------------
 @st.cache_data
 def load_similarity():
-    df= pd.read_csv("Cleaned_data.csv",index_col=False)
+    df= pd.read_csv("cleaned_data.csv",index_col=False)
     sim_df=pd.read_csv('product_similarity.csv', index_col=0)
     return df,sim_df
 
