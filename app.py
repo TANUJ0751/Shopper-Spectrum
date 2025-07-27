@@ -76,11 +76,11 @@ tab1, tab2 = st.tabs(["🔁 Product Recommendation", "🎯 Customer Segmentation
 with tab1:
     st.header("🔁 Recommend Similar Products")
 
-    product_list = similarity_df.columns.tolist()
-    selected_product = st.text_input("Enter Product Name")
+    product_names = sorted(name_to_code.keys())
+    selected_product = st.selectbox("Enter Product Name",product_names)
 
     if st.button("Recommend Products"):
-        recommendations = recommend_products(selected_product.upper())
+        recommendations = recommend_products(selected_product)
         st.success("Top 5 Recommended Products:")
         for rec in recommendations:
             st.write(rec)
